@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Bills Animation</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .marquee {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 10s linear infinite;
+    }
+
+    .icon-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      animation: rotate 10s linear infinite;
+    }
+
+    .icon {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: #f59e0b; 
+      border-radius: 50%;
+    }
+
+    .icon:nth-child(1) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .icon:nth-child(2) {
+      top: 25%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    .icon:nth-child(3) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .icon:nth-child(4) {
+      bottom: 25%;
+      right: 0;
+      transform: translateY(50%);
+    }
+
+    .icon:nth-child(5) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .icon:nth-child(6) {
+      bottom: 25%;
+      left: 0;
+      transform: translateY(50%);
+    }
+  </style>
+</head>
+<body class="bg-yellow-200 flex items-center justify-center min-h-screen">
+
+  <div class="text-center">
+    <div class="overflow-hidden h-10">
+      <div class="marquee text-2xl font-bold">
+        Pay bills instantly
+      </div>
+    </div>
+    <div class="icon-container mt-8">
+      <div class="icon">A</div>
+      <div class="icon">B</div>
+      <div class="icon">C</div>
+      <div class="icon">D</div>
+      <div class="icon">E</div>
+      <div class="icon">F</div>
+    </div>
+  </div>
+
+</body>
+</html>
